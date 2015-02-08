@@ -1,0 +1,11 @@
+<div class="transactions" ng-controller="TransactionListController">
+    <spinner ng-show="loading || processing"></spinner>
+
+    <form class="form-inline">
+        <input type="text" ng-model="query" class="form-control search-transaction" placeholder="Search"/>
+        <date-picker date="startDate" placeholder="Start date"></date-picker>
+        <date-picker date="endDate" placeholder="End date"></date-picker>
+    </form>
+
+    <transaction-list></transaction-list>
+</div>

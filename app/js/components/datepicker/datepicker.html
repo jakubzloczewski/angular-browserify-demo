@@ -1,0 +1,26 @@
+<div class="form-group">
+    <div class="input-group">
+        <input type="text"
+               class="form-control"
+               datepicker-popup="{{'dd.MM.yyyy'}}"
+               ng-model="date"
+               is-open="opened"
+               min-date="minDate"
+               max-date="'2015-06-22'"
+               datepicker-options="{
+                    formatYear: 'yy',
+                    startingDay: 1,
+                    'showWeeks' : false,
+                    'show-button-bar': false }"
+               ng-required="true"
+               close-text="Close"
+               placeholder="{{placeholder}}"/>
+              <span class="input-group-btn">
+                <button type="button"
+                        class="btn btn-default"
+                        ng-click="open($event)">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+              </span>
+    </div>
+</div>

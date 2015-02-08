@@ -1,0 +1,34 @@
+<table class="table table-striped transactionList animation" ng-class="{'fade-in': !loading }">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Amount</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="transaction in transactions | filter:query | dateRange: startDate : endDate | orderBy:'-createdAt'"
+        ng-class="{'danger': transaction.amount < -1000,'success': transaction.amount > 0}">
+        <td class="text-center">
+            <transaction-icon></transaction-icon>
+        <td>{{transaction.createdAt | date: 'dd.MM.yyyy' }}</td>
+        <td>{{transaction.name}}</td>
+        <td>
+                <span class="label label-default"
+                      ng-repeat="category in transaction.categories">
+                    {{category}}
+                </span>
+        </td>
+        <td><strong>{{transaction.amount | currency }}</strong></td>
+        <td>
+            <button type="button" class="btn btn-default btn-xs" ng-click="remove(transaction)">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Accept
+            </button>
+
+        </td>
+    </tr>
+    </tbody>
+</table>

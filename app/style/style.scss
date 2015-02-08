@@ -1,0 +1,30 @@
+@import "spinner";
+
+body {
+  margin: 1em;
+}
+
+span {
+  &.label {
+    margin: 0.1em;
+  }
+}
+
+.transactions {
+  min-height: 400px;
+  position: relative;
+  .form-inline {
+    margin: 1em 0;
+    > * {
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.animation {
+  opacity: 0;
+  transition: all 700ms ease-in-out;
+  &.fade-in {
+    opacity: 1;
+  }
+}
