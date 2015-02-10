@@ -19,8 +19,7 @@ gulp.task('browserify', function () {
         .pipe(livereload());
 });
 
-
-gulp.task('concat', function(){
+gulp.task('concat', function () {
     gulp.src([
         './bower_components/angular/angular.js',
         './bower_components/angular-resource/angular-resource.js',

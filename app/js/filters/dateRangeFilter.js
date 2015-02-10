@@ -1,7 +1,6 @@
 "use strict";
 
-module.exports = function () {
-    return function (items, startDate, endDate) {
+module.exports = function (items, startDate, endDate) {
         var newItems = [];
 
         startDate = startDate || {};
@@ -27,5 +26,4 @@ module.exports = function () {
         });
 
         return newItems;
-    };
 };
