@@ -26,6 +26,7 @@ gulp
 npm run test
 </code>
 
-## Todo
-
-- add e2e tests
+## run e2e tests:
+<code>
+npm run e2e
+</code>
